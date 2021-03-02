@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
 </head>
+
 <body>
+  <img id="lamaImage" src="Images/BW_CartoonLama.png" alt="LamaImage">
 
-    <img id="lamaImage" src="Images/BW_CartoonLama.png" alt="LamaImage">
+  <nav role="navigation">
 
-    <nav role="navigation">
-        <div id="menuToggle">
+    <div id="menuToggle">
+      <input type="checkbox" />
 
-          <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
 
-          <span></span>
-          <span></span>
-          <span></span>
+      <ul id="menu">
+        <li>
+          Ruota Immagine
+          <div id="rotateDiv">
+            <label> Angolo:</label><input type="text" value="0°" size="100" maxlength="4">
+          </div>
+        </li>
 
-          <ul id="menu">
-            <a href="#"><li>Ruota Immagine</li></a>
-            <a href="#"><li>Colore</li></a>
-            <a href="#"><li>Grandezza</li></a>
-            <a href="#"><li>Opacità</li></a>
-            <li></li>
+          <li>Colore</li>
+          <li>Grandezza</li>
+        <li>
+          Opacità
+          <div class="sliderContainer">
+            <label class="sliderOpacityMin">0</label>
+            <input type="range" min="0" max="100" value="100" class="slider" id="opacityRange">
+            <label class="sliderOpacityMax">1</label>
 
-          </ul>
-        </div>
-      </nav>
-    <script src="script.js"></script>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

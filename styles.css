@@ -7,7 +7,11 @@
     width: 30%;
     height: auto;
 
-    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition:transform .3s ease;
+
 }
 
 
@@ -38,21 +42,7 @@ body
   user-select: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #e9e9e9;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
-#menuToggle input
+#menuToggle input[type=checkbox]
 {
   display: block;
   width: 40px;
@@ -133,7 +123,7 @@ body
   width: 300px;
   margin: -100px 0 0 -300px;
   padding: 50px;
-  padding-top: 125px;
+  padding-top: 50px;
   padding-bottom: 100%;
 
 
@@ -151,6 +141,7 @@ body
 #menu li
 {
   padding: 15px 0;
+  padding-top: 25%;
   font-size: 22px;
 }
 
@@ -160,4 +151,112 @@ body
 #menuToggle input:checked ~ ul
 {
   transform: none; 
+}
+
+.sliderContainer
+{
+  position: absolute;
+  display: table;
+  width: 70%;
+  height: 5%;
+  padding-top: 3%;
+}
+
+.sliderOpacityMax
+{
+  display: table-cell;
+  position: absolute;
+  margin-top: -5%;
+  margin-left: 95%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.sliderOpacityMin
+{
+  display: table-cell;
+  position: absolute;
+  margin-top: -3%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.sliderContainer label:last-child()
+{
+  display: table-cell;
+  position: absolute;
+  margin-top: -3%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.slider {
+  position: relative;
+  display: table-cell; 
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  -webkit-appearance: none;
+  width: 80%;
+  height: 2%;
+  border-radius: 5px;  
+  background: #858585;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #dfdfdf;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #dfdfdf;
+  cursor: pointer;
+}
+
+#rotateDiv {
+  position: absolute;
+  display: table;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  z-index: 1;
+  width: 25%;
+  height: 2%;
+}
+
+#rotateDiv input[type=text]
+{
+  position: absolute;
+  
+  margin-left: 10px;
+
+  display: table-cell; 
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  font-size: 18px;
+  text-align: left;
+
+  background: #dfdfdf;
+  border-radius: 4px;
+  
+}
+
+#rotateDiv label {
+  display: table-cell; 
+  font-size: 17px;
 }
